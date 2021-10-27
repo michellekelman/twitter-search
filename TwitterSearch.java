@@ -1,14 +1,4 @@
-class Account {
-	
-}
-
-class Post {
-	
-}
-
-class Search {
-	
-}
+import java.util.*;
 
 public class TwitterSearch {
 
