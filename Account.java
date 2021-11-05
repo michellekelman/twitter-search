@@ -70,11 +70,17 @@ public class Account {
 	}
 	
 	void addPost(Post p) {
-		// add post
+		posts.add(p);
 	}
 	
 	void editPost(Post old, Post updated) {
-		// edit post
+		for (int i = 0; i > posts.length; i++)
+		{
+			if (posts[i].link == old.link)
+			{
+				posts[i] = updated;
+			}
+		}
 	}
 	
 	void deletePost(Post p) {
