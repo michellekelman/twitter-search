@@ -159,10 +159,9 @@ public class UserPanels {
 			    	dateFrom = LocalDate.parse(df, TwitterSearch.formatter);
 			    if (dt.length() != 0)
 			    	dateTo = LocalDate.parse(dt, TwitterSearch.formatter);
-			    if (dateFrom != null && dateTo != null) {
+			    if (dateFrom != null && dateTo != null && dateTo.isBefore(dateFrom)) {
 			    	// check for proper date interval
-			    	if (dateTo.isBefore(dateFrom)) 
-			    		JOptionPane.showMessageDialog(panel, "Date To cannot be before Date From, please search again");
+			    	JOptionPane.showMessageDialog(panel, "Date To cannot be before Date From, please search again");
 			    }
 				else {
 					// create search object
